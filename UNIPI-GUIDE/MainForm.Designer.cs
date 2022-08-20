@@ -1,7 +1,7 @@
 ﻿
 namespace UNIPI_GUIDE
 {
-    partial class Form3
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,7 @@ namespace UNIPI_GUIDE
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // guestLoginButton
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
@@ -73,7 +73,7 @@ namespace UNIPI_GUIDE
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // aboutButton
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.button3.Location = new System.Drawing.Point(106, 343);
@@ -85,7 +85,7 @@ namespace UNIPI_GUIDE
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // exitButton
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.button4.Location = new System.Drawing.Point(106, 269);

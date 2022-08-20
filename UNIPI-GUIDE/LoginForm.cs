@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form2 : Form
+    public partial class LoginForm : Form
     {
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3"; 
         private SQLiteConnection conn;
-        public Form2()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -46,7 +46,7 @@ namespace UNIPI_GUIDE
             {
                 this.Hide();
                 MessageBox.Show("Login Success!");
-                new Form3(username, password).Show();
+                new MainForm(username, password).Show();
             }
             else
             {

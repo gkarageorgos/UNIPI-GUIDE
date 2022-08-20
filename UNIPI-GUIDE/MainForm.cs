@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form3 : Form
+    public partial class MainForm : Form
     {
         private String username, password;
-        public Form3()
+        public MainForm()
         {
             InitializeComponent();
         }
 
-        public Form3(String str1,String str2)
+        public MainForm(String str1,String str2)
         {
             InitializeComponent();
             username = str1;
