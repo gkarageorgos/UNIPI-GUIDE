@@ -13,7 +13,8 @@ namespace UNIPI_GUIDE
     public partial class Form1 : Form
     {
         Boolean x;
-        public Form1()
+        int i, j, k;
+	public Form1()
         {
             InitializeComponent();
         }
