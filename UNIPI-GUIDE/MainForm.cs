@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class MainForm : Form
+    public partial class MainForm : BaseForm
     {
         private String username, password;
         public MainForm()
@@ -24,11 +24,6 @@ namespace UNIPI_GUIDE
             username = str1;
             password = str2;
             button3.Visible = true;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,9 +59,9 @@ namespace UNIPI_GUIDE
             new Form8().Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
+
         }
     }
 }

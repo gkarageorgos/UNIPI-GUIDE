@@ -1,7 +1,7 @@
 ﻿
 namespace UNIPI_GUIDE
 {
-    partial class EntryFrom
+    partial class EntryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -82,7 +82,7 @@ namespace UNIPI_GUIDE
             this.aboutButton.Text = "About";
             this.toolTip1.SetToolTip(this.aboutButton, "Τα στοιχεία των δημιουγών της εφαρμογής");
             this.aboutButton.UseVisualStyleBackColor = false;
-            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
+            this.aboutButton.Click += new System.EventHandler(this.baseAboutButton_Click);
             // 
             // exitButton
             // 
@@ -96,7 +96,7 @@ namespace UNIPI_GUIDE
             this.exitButton.Text = "Exit";
             this.toolTip1.SetToolTip(this.exitButton, "Κλείσιμο της εφαρμογής");
             this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Click += new System.EventHandler(this.baseExitButton_Click);
             // 
             // menuStrip1
             // 
