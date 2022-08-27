@@ -35,8 +35,8 @@ namespace UNIPI_GUIDE
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.exitbutton = new System.Windows.Forms.Button();
+            this.aboutbutton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -77,31 +77,31 @@ namespace UNIPI_GUIDE
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(516, 32);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 70);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Exit";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.exitbutton.BackColor = System.Drawing.Color.White;
+            this.exitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.exitbutton.ForeColor = System.Drawing.Color.Red;
+            this.exitbutton.Location = new System.Drawing.Point(516, 32);
+            this.exitbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.exitbutton.Name = "button2";
+            this.exitbutton.Size = new System.Drawing.Size(75, 70);
+            this.exitbutton.TabIndex = 13;
+            this.exitbutton.Text = "Exit";
+            this.exitbutton.UseVisualStyleBackColor = false;
+            this.exitbutton.Click += new System.EventHandler(this.baseExitButton_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(516, 291);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 70);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "About";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.aboutbutton.BackColor = System.Drawing.Color.White;
+            this.aboutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.aboutbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.aboutbutton.Location = new System.Drawing.Point(516, 291);
+            this.aboutbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.aboutbutton.Name = "button1";
+            this.aboutbutton.Size = new System.Drawing.Size(75, 70);
+            this.aboutbutton.TabIndex = 12;
+            this.aboutbutton.Text = "About";
+            this.aboutbutton.UseVisualStyleBackColor = false;
+            this.aboutbutton.Click += new System.EventHandler(this.baseAboutButton_Click);
             // 
             // timer1
             // 
@@ -125,8 +125,8 @@ namespace UNIPI_GUIDE
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exitbutton);
+            this.Controls.Add(this.aboutbutton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -149,8 +149,8 @@ namespace UNIPI_GUIDE
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button exitbutton;
+        private System.Windows.Forms.Button aboutbutton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

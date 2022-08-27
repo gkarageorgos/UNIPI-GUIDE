@@ -32,7 +32,7 @@ namespace UNIPI_GUIDE
             this.components = new System.ComponentModel.Container();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.aboutbutton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,20 +66,20 @@ namespace UNIPI_GUIDE
             this.button2.TabIndex = 11;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.baseExitButton_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(688, 359);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 86);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "About";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.aboutbutton.BackColor = System.Drawing.Color.White;
+            this.aboutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.aboutbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.aboutbutton.Location = new System.Drawing.Point(688, 359);
+            this.aboutbutton.Name = "button1";
+            this.aboutbutton.Size = new System.Drawing.Size(100, 86);
+            this.aboutbutton.TabIndex = 10;
+            this.aboutbutton.Text = "About";
+            this.aboutbutton.UseVisualStyleBackColor = false;
+            this.aboutbutton.Click += new System.EventHandler(this.baseAboutButton_Click);
             // 
             // menuStrip1
             // 
@@ -145,7 +145,7 @@ namespace UNIPI_GUIDE
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.aboutbutton);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -164,7 +164,7 @@ namespace UNIPI_GUIDE
 
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button aboutbutton;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
