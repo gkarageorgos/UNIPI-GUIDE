@@ -11,30 +11,22 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form2 : Form
+    public partial class LoginForm : BaseForm
     {
+        // DbConnectionWrapper wrapper;
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3"; 
         private SQLiteConnection conn;
-        public Form2()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
             conn.Open();
             String username = textBox1.Text;
             String password = textBox2.Text;
+            // Boolean userExists = wrapper.isUser(username, password);
             //Parameterized query
             String selectSQL = "Select * from Student where " +
                 "username=@username and password=@password";
@@ -46,7 +38,7 @@ namespace UNIPI_GUIDE
             {
                 this.Hide();
                 MessageBox.Show("Login Success!");
-                new Form3(username, password).Show();
+                new MainForm(username, password).Show();
             }
             else
             {
@@ -57,7 +49,7 @@ namespace UNIPI_GUIDE
             conn.Close();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
         {
             conn = new SQLiteConnection(connectionString);
         }

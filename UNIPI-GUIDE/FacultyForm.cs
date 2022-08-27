@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form6 : Form
+    public partial class FacultyForm : BaseForm
     {
         String username, password;
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3";
         private SQLiteConnection conn;
-        public Form6(String str1, String str2)
+        public FacultyForm(String str1, String str2)
         {
             InitializeComponent();
             username = str1;
@@ -30,16 +30,6 @@ namespace UNIPI_GUIDE
             {
                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

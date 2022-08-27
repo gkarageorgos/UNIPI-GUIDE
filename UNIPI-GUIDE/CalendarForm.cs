@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form7 : Form
+    public partial class CalendarForm : Form
     {
         private string[] events = { "Εξέταση βάσεων", "Δια ζώσης εξέταση στην java", "Υποβολή απαλλακτικής εργασίας C#" };
-        public Form7()
+        public CalendarForm()
         {
             InitializeComponent();
         }

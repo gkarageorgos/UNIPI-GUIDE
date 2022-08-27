@@ -10,23 +10,13 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form8 : Form
+    public partial class IconsForm : BaseForm
     {
         string[] images = { "Ano_Syros", "Cent George", "port_of_Syros", "Town_Hall_of_Hermoupolis", "Vaporia_Hermoupoli", "ΑγιοςΝικολαος" };
         private int i = 0;
-        public Form8()
+        public IconsForm()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
