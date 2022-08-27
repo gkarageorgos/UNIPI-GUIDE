@@ -12,7 +12,7 @@ namespace UNIPI_GUIDE
 {
     public partial class IconsForm : BaseForm
     {
-        string[] images = { "Ano_Syros", "Cent George", "port_of_Syros", "Town_Hall_of_Hermoupolis", "Vaporia_Hermoupoli", "ΑγιοςΝικολαος" };
+        string[] images = {  };
         private int i = 0;
         public IconsForm()
         {
@@ -23,7 +23,7 @@ namespace UNIPI_GUIDE
         {
             pictureBox1.ImageLocation = @"images\"+images[i]+".jpg";
             i += 1;
-            if (i == 6)
+            if (i == images.Length)
                 i = 0;
         }
 
