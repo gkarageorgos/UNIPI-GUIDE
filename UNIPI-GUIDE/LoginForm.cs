@@ -13,7 +13,6 @@ namespace UNIPI_GUIDE
 {
     public partial class LoginForm : BaseForm
     {
-        // DbConnectionWrapper wrapper;
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3"; 
         private SQLiteConnection conn;
         public LoginForm()
@@ -26,7 +25,6 @@ namespace UNIPI_GUIDE
             conn.Open();
             String username = textBox1.Text;
             String password = textBox2.Text;
-            // Boolean userExists = wrapper.isUser(username, password);
             //Parameterized query
             String selectSQL = "Select * from Student where " +
                 "username=@username and password=@password";
@@ -38,7 +36,7 @@ namespace UNIPI_GUIDE
             {
                 this.Hide();
                 MessageBox.Show("Login Success!");
-                new MainForm(username, password).Show();
+                new MainForm(true).Show();
             }
             else
             {
@@ -52,6 +50,11 @@ namespace UNIPI_GUIDE
         private void LoginForm_Load(object sender, EventArgs e)
         {
             conn = new SQLiteConnection(connectionString);
+        }
+
+        private void helpMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Πληκτρολογήστε όνομα χρήστη και κωδικό για να εισέλθετε στην εφαρμογή.");
         }
     }
 }

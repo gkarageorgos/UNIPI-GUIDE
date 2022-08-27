@@ -24,7 +24,7 @@ namespace UNIPI_GUIDE
 
         private void guestLoginButton_Click(object sender, EventArgs e)
         {
-            new MainForm().Show();
+            new MainForm(false).Show();
         }
 
         private void EntryForm_Load(object sender, EventArgs e)

@@ -39,6 +39,8 @@ namespace UNIPI_GUIDE
             this.aboutbutton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.item1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.item2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +61,9 @@ namespace UNIPI_GUIDE
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.item1ToolStripMenuItem,
+            this.item2ToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -75,33 +80,31 @@ namespace UNIPI_GUIDE
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // button2
+            // exitbutton
             // 
             this.exitbutton.BackColor = System.Drawing.Color.White;
             this.exitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.exitbutton.ForeColor = System.Drawing.Color.Red;
             this.exitbutton.Location = new System.Drawing.Point(516, 32);
-            this.exitbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.exitbutton.Name = "button2";
+            this.exitbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.exitbutton.Name = "exitbutton";
             this.exitbutton.Size = new System.Drawing.Size(75, 70);
             this.exitbutton.TabIndex = 13;
             this.exitbutton.Text = "Exit";
             this.exitbutton.UseVisualStyleBackColor = false;
-            this.exitbutton.Click += new System.EventHandler(this.baseExitButton_Click);
             // 
-            // button1
+            // aboutbutton
             // 
             this.aboutbutton.BackColor = System.Drawing.Color.White;
             this.aboutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.aboutbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.aboutbutton.Location = new System.Drawing.Point(516, 291);
-            this.aboutbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.aboutbutton.Name = "button1";
+            this.aboutbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.aboutbutton.Name = "aboutbutton";
             this.aboutbutton.Size = new System.Drawing.Size(75, 70);
             this.aboutbutton.TabIndex = 12;
             this.aboutbutton.Text = "About";
             this.aboutbutton.UseVisualStyleBackColor = false;
-            this.aboutbutton.Click += new System.EventHandler(this.baseAboutButton_Click);
             // 
             // timer1
             // 
@@ -112,12 +115,24 @@ namespace UNIPI_GUIDE
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(19, 41);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(344, 274);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
+            // 
+            // item1ToolStripMenuItem
+            // 
+            this.item1ToolStripMenuItem.Name = "item1ToolStripMenuItem";
+            this.item1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.item1ToolStripMenuItem.Text = "item1";
+            // 
+            // item2ToolStripMenuItem
+            // 
+            this.item2ToolStripMenuItem.Name = "item2ToolStripMenuItem";
+            this.item2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.item2ToolStripMenuItem.Text = "item2";
             // 
             // IconsForm
             // 
@@ -129,7 +144,7 @@ namespace UNIPI_GUIDE
             this.Controls.Add(this.aboutbutton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "IconsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Εικόνες από το ΠΑΠΕΙ";
@@ -153,5 +168,7 @@ namespace UNIPI_GUIDE
         private System.Windows.Forms.Button aboutbutton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem item1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem item2ToolStripMenuItem;
     }
 }

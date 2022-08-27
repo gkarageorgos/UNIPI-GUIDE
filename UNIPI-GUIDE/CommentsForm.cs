@@ -15,9 +15,11 @@ namespace UNIPI_GUIDE
     {
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3";
         private SQLiteConnection conn;
-        public CommentsForm()
+
+        public CommentsForm(Boolean user)
         {
             InitializeComponent();
+            initializeBaseUserMenuStrip(exclude: "comments");
         }
 
         private void Form5_Load(object sender, EventArgs e)
@@ -56,5 +58,6 @@ namespace UNIPI_GUIDE
                 saveButton.Enabled = true;
             }
         }
+
     }
 }

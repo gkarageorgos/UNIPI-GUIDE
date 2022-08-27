@@ -12,18 +12,12 @@ namespace UNIPI_GUIDE
 {
     public partial class MainForm : BaseForm
     {
-        private String username, password;
-        public MainForm()
+        
+        public MainForm(Boolean user)
         {
             InitializeComponent();
-        }
-
-        public MainForm(String str1,String str2)
-        {
-            InitializeComponent();
-            username = str1;
-            password = str2;
-            submitCommentsButton.Visible = true;
+            this.user = user;
+            if (user) submitCommentsButton.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -33,7 +27,8 @@ namespace UNIPI_GUIDE
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new CommentsForm().Show();            
+
+            new CommentsForm(user).Show();            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -46,7 +41,7 @@ namespace UNIPI_GUIDE
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new FacultyForm(username, password).Show();
+            new FacultyForm(user).Show();
         }
 
         private void button7_Click(object sender, EventArgs e)

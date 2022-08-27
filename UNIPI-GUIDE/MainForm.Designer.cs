@@ -38,13 +38,9 @@ namespace UNIPI_GUIDE
             this.reviewsButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facultyButton = new System.Windows.Forms.Button();
             this.calendarButton = new System.Windows.Forms.Button();
             this.photosButton = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // exitButton
@@ -53,8 +49,8 @@ namespace UNIPI_GUIDE
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.exitButton.ForeColor = System.Drawing.Color.Red;
             this.exitButton.Location = new System.Drawing.Point(516, 25);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.exitButton.Name = "button2";
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 70);
             this.exitButton.TabIndex = 5;
             this.exitButton.Text = "Exit";
@@ -67,8 +63,8 @@ namespace UNIPI_GUIDE
             this.aboutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.aboutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.aboutButton.Location = new System.Drawing.Point(516, 284);
-            this.aboutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.aboutButton.Name = "button1";
+            this.aboutButton.Margin = new System.Windows.Forms.Padding(2);
+            this.aboutButton.Name = "aboutButton";
             this.aboutButton.Size = new System.Drawing.Size(75, 70);
             this.aboutButton.TabIndex = 4;
             this.aboutButton.Text = "About";
@@ -79,8 +75,8 @@ namespace UNIPI_GUIDE
             // 
             this.submitCommentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.submitCommentsButton.Location = new System.Drawing.Point(80, 279);
-            this.submitCommentsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.submitCommentsButton.Name = "button3";
+            this.submitCommentsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.submitCommentsButton.Name = "submitCommentsButton";
             this.submitCommentsButton.Size = new System.Drawing.Size(160, 55);
             this.submitCommentsButton.TabIndex = 6;
             this.submitCommentsButton.Text = "Υποβολή Σχολίων";
@@ -94,8 +90,8 @@ namespace UNIPI_GUIDE
             this.chooseColorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.chooseColorButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.chooseColorButton.Location = new System.Drawing.Point(516, 158);
-            this.chooseColorButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.chooseColorButton.Name = "button5";
+            this.chooseColorButton.Margin = new System.Windows.Forms.Padding(2);
+            this.chooseColorButton.Name = "chooseColorButton";
             this.chooseColorButton.Size = new System.Drawing.Size(75, 70);
             this.chooseColorButton.TabIndex = 8;
             this.chooseColorButton.Text = "Choose Color";
@@ -107,8 +103,8 @@ namespace UNIPI_GUIDE
             // 
             this.reviewsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.reviewsButton.Location = new System.Drawing.Point(80, 219);
-            this.reviewsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.reviewsButton.Name = "button4";
+            this.reviewsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.reviewsButton.Name = "reviewsButton";
             this.reviewsButton.Size = new System.Drawing.Size(160, 55);
             this.reviewsButton.TabIndex = 7;
             this.reviewsButton.Text = "Κριτικές";
@@ -118,10 +114,6 @@ namespace UNIPI_GUIDE
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -129,30 +121,12 @@ namespace UNIPI_GUIDE
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
             // facultyButton
             // 
             this.facultyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.facultyButton.Location = new System.Drawing.Point(80, 38);
-            this.facultyButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.facultyButton.Name = "button6";
+            this.facultyButton.Margin = new System.Windows.Forms.Padding(2);
+            this.facultyButton.Name = "facultyButton";
             this.facultyButton.Size = new System.Drawing.Size(160, 55);
             this.facultyButton.TabIndex = 10;
             this.facultyButton.Text = "Καθηγητές";
@@ -163,8 +137,8 @@ namespace UNIPI_GUIDE
             // 
             this.calendarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.calendarButton.Location = new System.Drawing.Point(80, 98);
-            this.calendarButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.calendarButton.Name = "button7";
+            this.calendarButton.Margin = new System.Windows.Forms.Padding(2);
+            this.calendarButton.Name = "calendarButton";
             this.calendarButton.Size = new System.Drawing.Size(160, 55);
             this.calendarButton.TabIndex = 11;
             this.calendarButton.Text = "Ημερολόγιο";
@@ -175,8 +149,8 @@ namespace UNIPI_GUIDE
             // 
             this.photosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.photosButton.Location = new System.Drawing.Point(80, 158);
-            this.photosButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.photosButton.Name = "button8";
+            this.photosButton.Margin = new System.Windows.Forms.Padding(2);
+            this.photosButton.Name = "photosButton";
             this.photosButton.Size = new System.Drawing.Size(160, 55);
             this.photosButton.TabIndex = 12;
             this.photosButton.Text = "Φωτογραφίες";
@@ -199,13 +173,11 @@ namespace UNIPI_GUIDE
             this.Controls.Add(this.aboutButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Μενού";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,9 +193,6 @@ namespace UNIPI_GUIDE
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button chooseColorButton;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Button facultyButton;
         private System.Windows.Forms.Button calendarButton;
         private System.Windows.Forms.Button photosButton;

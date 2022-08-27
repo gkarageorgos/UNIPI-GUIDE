@@ -13,14 +13,12 @@ namespace UNIPI_GUIDE
 {
     public partial class FacultyForm : BaseForm
     {
-        String username, password;
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3";
         private SQLiteConnection conn;
-        public FacultyForm(String str1, String str2)
+        public FacultyForm(Boolean user)
         {
             InitializeComponent();
-            username = str1;
-            password = str2;            
+            this.user = user;            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -46,7 +44,7 @@ namespace UNIPI_GUIDE
             SQLiteDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                if (username != null)
+                if (user)
                 {
                     richTextBox1.AppendText(reader.GetString(0) + ", " + reader.GetString(1) + ", " + reader.GetString(2) + Environment.NewLine);
                 }
