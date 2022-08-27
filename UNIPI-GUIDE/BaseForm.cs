@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
@@ -13,7 +9,7 @@ namespace UNIPI_GUIDE
         protected MenuStrip baseMenuStrip;
         protected System.Windows.Forms.ToolStripMenuItem facultyToolStripMenuItem;
         protected System.Windows.Forms.ToolStripMenuItem calendarToolStripMenuItem;
-        protected System.Windows.Forms.ToolStripMenuItem photosToolStripMenuItem;
+        protected System.Windows.Forms.ToolStripMenuItem iconsToolStripMenuItem;
         protected System.Windows.Forms.ToolStripMenuItem commentsToolStripMenuItem;
 
         protected Boolean user = false;
@@ -35,7 +31,7 @@ namespace UNIPI_GUIDE
             this.baseMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facultyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.photosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 
             this.baseMenuStrip.SuspendLayout();
@@ -62,7 +58,7 @@ namespace UNIPI_GUIDE
 
             if (exclude != "faculty") initializeFacultyToolStripMenuItem();
             if (exclude != "calendar") initializeCalendarToolStripMenuItem();
-            if (exclude != "photos") initializePhotosToolStripMenuItem();
+            if (exclude != "icons") initializeIconsToolStripMenuItem();
             if (exclude != "comments") initializeCommentsToolStripMenuItem();
         }
 
@@ -71,6 +67,7 @@ namespace UNIPI_GUIDE
             this.facultyToolStripMenuItem.Name = "facultyToolStripMenuItem";
             this.facultyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.facultyToolStripMenuItem.Text = "Καθηγητές";
+            this.facultyToolStripMenuItem.Click += new System.EventHandler(facultyToolStripMenuItem_Click);
             this.baseMenuToolStripMenuItem.DropDownItems.Add(this.facultyToolStripMenuItem);
         }
 
@@ -79,15 +76,17 @@ namespace UNIPI_GUIDE
             this.calendarToolStripMenuItem.Name = "calendarToolStripMenuItem";
             this.calendarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calendarToolStripMenuItem.Text = "Ημερολόγιο";
+            this.calendarToolStripMenuItem.Click += new System.EventHandler(calendarToolStripMenuItem_Click);
             this.baseMenuToolStripMenuItem.DropDownItems.Add(this.calendarToolStripMenuItem);
         }
 
-        private void initializePhotosToolStripMenuItem()
+        private void initializeIconsToolStripMenuItem()
         {
-            this.photosToolStripMenuItem.Name = "photosToolStripMenuItem";
-            this.photosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.photosToolStripMenuItem.Text = "Φωτογραφίες";
-            this.baseMenuToolStripMenuItem.DropDownItems.Add(this.photosToolStripMenuItem);
+            this.iconsToolStripMenuItem.Name = "iconsToolStripMenuItem";
+            this.iconsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.iconsToolStripMenuItem.Text = "Φωτογραφίες";
+            this.iconsToolStripMenuItem.Click += new System.EventHandler(iconsToolStripMenuItem_Click);
+            this.baseMenuToolStripMenuItem.DropDownItems.Add(this.iconsToolStripMenuItem);
         }
 
         private void initializeCommentsToolStripMenuItem()
@@ -95,50 +94,30 @@ namespace UNIPI_GUIDE
             this.commentsToolStripMenuItem.Name = "reviewsToolStripMenuItem";
             this.commentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.commentsToolStripMenuItem.Text = "Κριτικές";
+            this.commentsToolStripMenuItem.Click += new System.EventHandler(commentsToolStripMenuItem_Click);
             this.baseMenuToolStripMenuItem.DropDownItems.Add(this.commentsToolStripMenuItem);
         }
 
-
-        private void InitializeComponent()
+        private void facultyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.baseMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.baseMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.baseMenuStrip.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // baseMenuStrip
-            // 
-            this.baseMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.baseMenuToolStripMenuItem});
-            this.baseMenuStrip.Location = new System.Drawing.Point(0, 0);
-            this.baseMenuStrip.Name = "menuStrip1";
-            this.baseMenuStrip.Size = new System.Drawing.Size(284, 24);
-            this.baseMenuStrip.TabIndex = 0;
-            this.baseMenuStrip.Text = "menuStrip1";
-            // 
-            // baseMenuToolStripMenuItem
-            // 
-            this.baseMenuToolStripMenuItem.Name = "basemenuToolStripMenuItem";
-            this.baseMenuToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.baseMenuToolStripMenuItem.Text = "Μενού";
-            // 
-            // BaseForm
-            // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.baseMenuStrip);
-            this.MainMenuStrip = this.baseMenuStrip;
-            this.Name = "BaseForm";
-            this.Load += new System.EventHandler(this.BaseForm_Load);
-            this.baseMenuStrip.ResumeLayout(false);
-            this.baseMenuStrip.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            new FacultyForm(this.user).Show();        
         }
 
-        private void BaseForm_Load(object sender, EventArgs e)
+        private void calendarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new CalendarForm().Show();
         }
+
+        private void iconsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new IconsForm().Show();
+        }
+
+        private void commentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CommentsForm(this.user).Show();
+        }
+
+
     }
 }

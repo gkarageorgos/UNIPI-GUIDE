@@ -18,6 +18,7 @@ namespace UNIPI_GUIDE
         public FacultyForm(Boolean user)
         {
             InitializeComponent();
+            initializeBaseUserMenuStrip(exclude: "faculty");
             this.user = user;            
         }
 

@@ -16,6 +16,7 @@ namespace UNIPI_GUIDE
         public CalendarForm()
         {
             InitializeComponent();
+            initializeBaseUserMenuStrip(exclude: "calendar");
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)

@@ -17,6 +17,7 @@ namespace UNIPI_GUIDE
         public IconsForm()
         {
             InitializeComponent();
+            initializeBaseUserMenuStrip(exclude: "icons");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -31,6 +32,11 @@ namespace UNIPI_GUIDE
         {
             pictureBox1.ImageLocation = @"..\..\images\icon1.jpg";
             i += 1;
+        }
+
+        private void item2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
