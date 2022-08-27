@@ -10,22 +10,12 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class CalendarForm : Form
+    public partial class CalendarForm : BaseForm
     {
         private string[] events = { "Εξέταση βάσεων", "Δια ζώσης εξέταση στην java", "Υποβολή απαλλακτικής εργασίας C#" };
         public CalendarForm()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {            
-            MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -40,5 +30,8 @@ namespace UNIPI_GUIDE
                 }
             }
         }
+
+        private void CalendarForm_Load(object sender, EventArgs e)
+        {}
     }
 }

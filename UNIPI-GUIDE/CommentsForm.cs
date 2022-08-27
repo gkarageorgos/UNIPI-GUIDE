@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class CommentsForm : Form
+    public partial class CommentsForm : BaseForm
     {
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3";
         private SQLiteConnection conn;
@@ -35,17 +35,7 @@ namespace UNIPI_GUIDE
             conn.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void saveButton_Click(object sender, EventArgs e)
         {
             saveFileDialog1.InitialDirectory = Application.StartupPath + "\\savetextfiles";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -59,11 +49,11 @@ namespace UNIPI_GUIDE
         {
             if (richTextBox1.Text == "")
             {
-                button3.Enabled = false;
+                saveButton.Enabled = false;
             }
             else
             {
-                button3.Enabled = true;
+                saveButton.Enabled = true;
             }
         }
     }
