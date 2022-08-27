@@ -23,17 +23,17 @@ namespace UNIPI_GUIDE
             InitializeComponent();
             username = str1;
             password = str2;
-            button3.Visible = true;
+            submitCommentsButton.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            new SubmitCommentsForm().Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new Form5().Show();            
+            new CommentsForm().Show();            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -46,17 +46,17 @@ namespace UNIPI_GUIDE
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new Form6(username, password).Show();
+            new FacultyForm(username, password).Show();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new Form7().Show();
+            new CalendarForm().Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            new Form8().Show();
+            new IconsForm().Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

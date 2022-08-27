@@ -1,7 +1,7 @@
 ﻿
 namespace UNIPI_GUIDE
 {
-    partial class Form7
+    partial class CalendarForm
     {
         /// <summary>
         /// Required designer variable.
