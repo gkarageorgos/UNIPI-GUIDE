@@ -10,10 +10,11 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form7 : Form
+    public partial class IconsForm : Form
     {
-        private string[] events = { "Εξέταση βάσεων", "Δια ζώσης εξέταση στην java", "Υποβολή απαλλακτικής εργασίας C#" };
-        public Form7()
+        string[] images = { "Ano_Syros", "Cent George", "port_of_Syros", "Town_Hall_of_Hermoupolis", "Vaporia_Hermoupoli", "ΑγιοςΝικολαος" };
+        private int i = 0;
+        public IconsForm()
         {
             InitializeComponent();
         }
@@ -24,21 +25,22 @@ namespace UNIPI_GUIDE
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {            
+        {
             MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
         }
 
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime[] dates = monthCalendar1.BoldedDates;
-            for (int i = 0; i < dates.Length; i++)
-            {
-                if (monthCalendar1.SelectionRange.Start == dates[i])
-                {
-                    MessageBox.Show(events[i]);
-                    continue;
-                }
-            }
+            pictureBox1.ImageLocation = @"images\"+images[i]+".jpg";
+            i += 1;
+            if (i == 6)
+                i = 0;
+        }
+
+        private void Form8_Load(object sender, EventArgs e)
+        {
+            pictureBox1.ImageLocation = @"images\" + images[0] + ".jpg";
+            i += 1;
         }
     }
 }

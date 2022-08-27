@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class Form4 : Form
+    public partial class SubmitCommentsForm : Form
     {
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3"; 
         private SQLiteConnection conn;
-        public Form4()
+        public SubmitCommentsForm()
         {
             InitializeComponent();
         }
