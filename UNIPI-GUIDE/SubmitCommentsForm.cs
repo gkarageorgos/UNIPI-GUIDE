@@ -11,13 +11,14 @@ using System.Windows.Forms;
 
 namespace UNIPI_GUIDE
 {
-    public partial class SubmitCommentsForm : Form
+    public partial class SubmitCommentsForm : BaseForm
     {
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3"; 
         private SQLiteConnection conn;
         public SubmitCommentsForm()
         {
             InitializeComponent();
+            initializeBaseUserMenuStrip(exclude: "");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -33,16 +34,6 @@ namespace UNIPI_GUIDE
                 MessageBox.Show("Σας ευχαριστούμε!");
             conn.Close();
             this.Hide();            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ210 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

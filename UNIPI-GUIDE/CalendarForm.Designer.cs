@@ -48,6 +48,7 @@ namespace UNIPI_GUIDE
             this.exitButton.TabIndex = 13;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.baseExitButton_Click);
             // 
             // aboutButton
             // 
@@ -61,6 +62,7 @@ namespace UNIPI_GUIDE
             this.aboutButton.TabIndex = 12;
             this.aboutButton.Text = "About";
             this.aboutButton.UseVisualStyleBackColor = false;
+            this.aboutButton.Click += new System.EventHandler(this.baseAboutButton_Click);
             // 
             // monthCalendar1
             // 
