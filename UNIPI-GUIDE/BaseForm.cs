@@ -15,12 +15,12 @@ namespace UNIPI_GUIDE
         protected Boolean user = false;
 
 
-        protected void baseExitButton_Click(object sender, EventArgs e)
+        protected static void baseExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        protected void baseAboutButton_Click(object sender, EventArgs e)
+        protected static void baseAboutButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ21054 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
         }

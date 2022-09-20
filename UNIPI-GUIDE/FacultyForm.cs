@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace UNIPI_GUIDE
             saveFileDialog1.InitialDirectory = Application.StartupPath + "\\savetextfiles";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+                File.WriteAllText(saveFileDialog1.FileName, richTextBox1.Text, Encoding.UTF8);
             }
         }
 

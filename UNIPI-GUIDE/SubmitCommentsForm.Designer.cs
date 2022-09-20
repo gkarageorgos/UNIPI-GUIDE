@@ -58,7 +58,7 @@ namespace UNIPI_GUIDE
             this.button2.TabIndex = 7;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.baseExitButton_Click);
+            this.button2.Click += new System.EventHandler(BaseForm.baseExitButton_Click);
             // 
             // button1
             // 
@@ -71,7 +71,7 @@ namespace UNIPI_GUIDE
             this.button1.TabIndex = 6;
             this.button1.Text = "About";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.baseAboutButton_Click);
+            this.button1.Click += new System.EventHandler(BaseForm.baseAboutButton_Click);
             // 
             // label1
             // 
@@ -126,9 +126,5 @@ namespace UNIPI_GUIDE
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
