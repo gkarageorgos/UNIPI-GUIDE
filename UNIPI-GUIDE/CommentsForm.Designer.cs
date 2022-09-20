@@ -66,7 +66,7 @@ namespace UNIPI_GUIDE
             this.exitButton.TabIndex = 9;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.baseExitButton_Click);
+            this.exitButton.Click += new System.EventHandler(BaseForm.baseExitButton_Click);
             // 
             // aboutButton
             // 
@@ -80,7 +80,7 @@ namespace UNIPI_GUIDE
             this.aboutButton.TabIndex = 8;
             this.aboutButton.Text = "About";
             this.aboutButton.UseVisualStyleBackColor = false;
-            this.aboutButton.Click += new System.EventHandler(this.baseAboutButton_Click);
+            this.aboutButton.Click += new System.EventHandler(BaseForm.baseAboutButton_Click);
             // 
             // saveButton
             // 

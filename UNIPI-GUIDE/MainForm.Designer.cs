@@ -41,6 +41,7 @@ namespace UNIPI_GUIDE
             this.facultyButton = new System.Windows.Forms.Button();
             this.calendarButton = new System.Windows.Forms.Button();
             this.photosButton = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // exitButton
@@ -157,12 +158,21 @@ namespace UNIPI_GUIDE
             this.photosButton.UseVisualStyleBackColor = true;
             this.photosButton.Click += new System.EventHandler(this.button8_Click);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(267, 98);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(227, 210);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Olive;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.photosButton);
             this.Controls.Add(this.calendarButton);
             this.Controls.Add(this.facultyButton);
@@ -196,5 +206,6 @@ namespace UNIPI_GUIDE
         private System.Windows.Forms.Button facultyButton;
         private System.Windows.Forms.Button calendarButton;
         private System.Windows.Forms.Button photosButton;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
