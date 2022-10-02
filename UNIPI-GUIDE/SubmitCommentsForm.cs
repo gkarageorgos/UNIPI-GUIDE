@@ -15,10 +15,10 @@ namespace UNIPI_GUIDE
     {
         String connectionString = "Data source=UNIPI-GUIDE.db;Version=3"; 
         private SQLiteConnection conn;
-        public SubmitCommentsForm()
+        public SubmitCommentsForm(Boolean user)
         {
             InitializeComponent();
-            initializeBaseUserMenuStrip(exclude: "");
+            initializeBaseUserMenuStrip(exclude: "submitComments", user);
         }
 
         private void button3_Click(object sender, EventArgs e)

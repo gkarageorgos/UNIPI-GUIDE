@@ -17,6 +17,7 @@ namespace UNIPI_GUIDE
         public MainForm(Boolean user)
         {
             InitializeComponent();
+            initializeBaseUserMenuStrip("", user);
             this.user = user;
             if (user) submitCommentsButton.Visible = true;
             initializeRichTextBoxText();
@@ -30,7 +31,7 @@ namespace UNIPI_GUIDE
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new SubmitCommentsForm().Show();
+            new SubmitCommentsForm(user).Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -54,12 +55,12 @@ namespace UNIPI_GUIDE
 
         private void button7_Click(object sender, EventArgs e)
         {
-            new CalendarForm().Show();
+            new CalendarForm(user).Show();
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            new IconsForm().Show();
+            new IconsForm(user).Show();
         }
 
         private void MainForm_Load(object sender, EventArgs e)

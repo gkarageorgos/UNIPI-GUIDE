@@ -19,8 +19,7 @@ namespace UNIPI_GUIDE
         public FacultyForm(Boolean user)
         {
             InitializeComponent();
-            initializeBaseUserMenuStrip(exclude: "faculty");
-            this.user = user;            
+            initializeBaseUserMenuStrip(exclude: "faculty", user);     
         }
 
         private void button3_Click(object sender, EventArgs e)

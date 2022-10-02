@@ -11,6 +11,7 @@ namespace UNIPI_GUIDE
         protected System.Windows.Forms.ToolStripMenuItem calendarToolStripMenuItem;
         protected System.Windows.Forms.ToolStripMenuItem iconsToolStripMenuItem;
         protected System.Windows.Forms.ToolStripMenuItem commentsToolStripMenuItem;
+        protected System.Windows.Forms.ToolStripMenuItem submitcommentsToolStripMenuItem;
 
         protected Boolean user = false;
 
@@ -25,7 +26,7 @@ namespace UNIPI_GUIDE
             MessageBox.Show("Οι δημιουργοί του application είναι οι φοιτητές: Μάξιμος Νικηφοράκης με ΑΜ:ΜΠΠΛ21054 και ο Γιάννης Καραγεώργος με ΑΜ:ΜΠΠΛ21023");
         }
 
-        protected void initializeBaseUserMenuStrip(String exclude)
+        protected void initializeBaseUserMenuStrip(String exclude, Boolean user)
         {
             this.baseMenuStrip = new System.Windows.Forms.MenuStrip();
             this.baseMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -33,6 +34,7 @@ namespace UNIPI_GUIDE
             this.calendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iconsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.submitcommentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 
             this.baseMenuStrip.SuspendLayout();
             this.Controls.Add(this.baseMenuStrip);
@@ -60,6 +62,11 @@ namespace UNIPI_GUIDE
             if (exclude != "calendar") initializeCalendarToolStripMenuItem();
             if (exclude != "icons") initializeIconsToolStripMenuItem();
             if (exclude != "comments") initializeCommentsToolStripMenuItem();
+            if (exclude != "submitComments")
+            {
+                if (user)
+                    initializeSubmitCommentsToolStripMenuItem();
+            }
         }
 
         private void initializeFacultyToolStripMenuItem()
@@ -98,6 +105,15 @@ namespace UNIPI_GUIDE
             this.baseMenuToolStripMenuItem.DropDownItems.Add(this.commentsToolStripMenuItem);
         }
 
+        private void initializeSubmitCommentsToolStripMenuItem()
+        {
+            this.submitcommentsToolStripMenuItem.Name = "submitcommentsToolStripMenuItem";
+            this.submitcommentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.submitcommentsToolStripMenuItem.Text = "Υποβολή σχολίων";
+            this.submitcommentsToolStripMenuItem.Click += new System.EventHandler(submitcommentsToolStripMenuItem_Click);
+            this.baseMenuToolStripMenuItem.DropDownItems.Add(this.submitcommentsToolStripMenuItem);
+        }
+
         private void facultyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new FacultyForm(this.user).Show();        
@@ -105,12 +121,12 @@ namespace UNIPI_GUIDE
 
         private void calendarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new CalendarForm().Show();
+            new CalendarForm(this.user).Show();
         }
 
         private void iconsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new IconsForm().Show();
+            new IconsForm(this.user).Show();
         }
 
         private void commentsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,6 +134,9 @@ namespace UNIPI_GUIDE
             new CommentsForm(this.user).Show();
         }
 
-
+        private void submitcommentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SubmitCommentsForm(this.user).Show();
+        }
     }
 }

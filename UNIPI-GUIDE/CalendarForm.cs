@@ -13,10 +13,10 @@ namespace UNIPI_GUIDE
     public partial class CalendarForm : BaseForm
     {
         private string[] events = { "Εξέταση βάσεων", "Δια ζώσης εξέταση στην java", "Υποβολή απαλλακτικής εργασίας C#" };
-        public CalendarForm()
+        public CalendarForm(Boolean user)
         {
             InitializeComponent();
-            initializeBaseUserMenuStrip(exclude: "calendar");
+            initializeBaseUserMenuStrip(exclude: "calendar", user);
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
