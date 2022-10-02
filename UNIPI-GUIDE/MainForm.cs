@@ -62,10 +62,5 @@ namespace UNIPI_GUIDE
         {
             new IconsForm(user).Show();
         }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

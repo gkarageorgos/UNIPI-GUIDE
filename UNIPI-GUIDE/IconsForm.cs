@@ -34,7 +34,7 @@ namespace UNIPI_GUIDE
             i += 1;
         }
 
-        private void item2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutbutton_Click(object sender, EventArgs e)
         {
 
         }
