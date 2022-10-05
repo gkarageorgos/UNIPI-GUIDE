@@ -19,7 +19,7 @@ namespace UNIPI_GUIDE
         public CommentsForm(Boolean user)
         {
             InitializeComponent();
-            initializeBaseUserMenuStrip(exclude: "comments");
+            initializeBaseUserMenuStrip(exclude: "comments", user);
         }
 
         private void Form5_Load(object sender, EventArgs e)

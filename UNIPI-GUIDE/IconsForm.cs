@@ -14,10 +14,10 @@ namespace UNIPI_GUIDE
     {
         
         private int i = 1;
-        public IconsForm()
+        public IconsForm(Boolean user)
         {
             InitializeComponent();
-            initializeBaseUserMenuStrip(exclude: "icons");
+            initializeBaseUserMenuStrip(exclude: "icons", user);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace UNIPI_GUIDE
             i += 1;
         }
 
-        private void item2ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutbutton_Click(object sender, EventArgs e)
         {
 
         }

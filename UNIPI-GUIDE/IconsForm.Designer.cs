@@ -31,40 +31,42 @@ namespace UNIPI_GUIDE
         {
             this.components = new System.ComponentModel.Container();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.exitbutton = new System.Windows.Forms.Button();
-            this.aboutbutton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.aboutButton = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // exitbutton
+            // exitButton
             // 
-            this.exitbutton.BackColor = System.Drawing.Color.White;
-            this.exitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.exitbutton.ForeColor = System.Drawing.Color.Red;
-            this.exitbutton.Location = new System.Drawing.Point(516, 32);
-            this.exitbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.exitbutton.Name = "exitbutton";
-            this.exitbutton.Size = new System.Drawing.Size(75, 70);
-            this.exitbutton.TabIndex = 13;
-            this.exitbutton.Text = "Exit";
-            this.exitbutton.UseVisualStyleBackColor = false;
-            this.exitbutton.Click += new System.EventHandler(BaseForm.baseExitButton_Click);
+            this.exitButton.BackColor = System.Drawing.Color.White;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.exitButton.ForeColor = System.Drawing.Color.Red;
+            this.exitButton.Location = new System.Drawing.Point(688, 39);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exitButton.Name = "exitbutton";
+            this.exitButton.Size = new System.Drawing.Size(100, 86);
+            this.exitButton.TabIndex = 13;
+            this.exitButton.Text = "Exit";
+            this.toolTip1.SetToolTip(this.exitButton, "Κλείσιμο της εφαρμογής");
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(BaseForm.baseExitButton_Click);
             // 
-            // aboutbutton
+            // aboutButton
             // 
-            this.aboutbutton.BackColor = System.Drawing.Color.White;
-            this.aboutbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
-            this.aboutbutton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.aboutbutton.Location = new System.Drawing.Point(516, 291);
-            this.aboutbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.aboutbutton.Name = "aboutbutton";
-            this.aboutbutton.Size = new System.Drawing.Size(75, 70);
-            this.aboutbutton.TabIndex = 12;
-            this.aboutbutton.Text = "About";
-            this.aboutbutton.UseVisualStyleBackColor = false;
-            this.aboutbutton.Click += new System.EventHandler(BaseForm.baseAboutButton_Click);
+            this.aboutButton.BackColor = System.Drawing.Color.White;
+            this.aboutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.aboutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.aboutButton.Location = new System.Drawing.Point(688, 358);
+            this.aboutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.aboutButton.Name = "aboutbutton";
+            this.aboutButton.Size = new System.Drawing.Size(100, 86);
+            this.aboutButton.TabIndex = 12;
+            this.aboutButton.Text = "About";
+            this.toolTip1.SetToolTip(this.aboutButton, "Τα στοιχεία των δημιουργών της εφαρμογής");
+            this.aboutButton.UseVisualStyleBackColor = false;
+            this.aboutButton.Click += new System.EventHandler(BaseForm.baseAboutButton_Click);
             // 
             // timer1
             // 
@@ -74,23 +76,23 @@ namespace UNIPI_GUIDE
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 41);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 274);
+            this.pictureBox1.Size = new System.Drawing.Size(459, 337);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
             // IconsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.exitbutton);
-            this.Controls.Add(this.aboutbutton);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.aboutButton);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IconsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Εικόνες από το ΠΑΠΕΙ";
@@ -103,8 +105,8 @@ namespace UNIPI_GUIDE
         #endregion
 
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button exitbutton;
-        private System.Windows.Forms.Button aboutbutton;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button aboutButton;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
