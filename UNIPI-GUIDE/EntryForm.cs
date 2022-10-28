@@ -32,14 +32,14 @@ namespace UNIPI_GUIDE
 
         private void EntryForm_Load(object sender, EventArgs e)
         {
-            player = new SoundPlayer("media/welcome.wav");
+            player = new SoundPlayer(@".\media\welcome.wav");
             player.Play();
-            axWindowsMediaPlayer1.URL = "media/PAPEI.mp4";
+            axWindowsMediaPlayer1.URL = @".\media\\PAPEI.mp4";
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.URL = "media/presentation.mkv";
+            axWindowsMediaPlayer1.URL = @".\media\presentation.mkv";
         }
     }
 }

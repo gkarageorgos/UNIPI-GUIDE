@@ -13,7 +13,7 @@ namespace UNIPI_GUIDE
 {
     public partial class LoginForm : BaseForm
     {
-        String connectionString = "Data source=UNIPI-GUIDE.db;Version=3"; 
+        String connectionString = "Data source=..\\..\\UNIPI-GUIDE.db;Version=3"; 
         private SQLiteConnection conn;
         public LoginForm()
         {

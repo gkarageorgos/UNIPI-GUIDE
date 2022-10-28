@@ -13,7 +13,7 @@ namespace UNIPI_GUIDE
 {
     public partial class CommentsForm : BaseForm
     {
-        String connectionString = "Data source=UNIPI-GUIDE.db;Version=3";
+        String connectionString = "Data source=..\\..\\UNIPI-GUIDE.db;Version=3";
         private SQLiteConnection conn;
 
         public CommentsForm(Boolean user)
@@ -39,7 +39,7 @@ namespace UNIPI_GUIDE
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.InitialDirectory = Application.StartupPath + "\\savetextfiles";
+            saveFileDialog1.InitialDirectory = Application.StartupPath + "..\\..\\savetextfiles";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
